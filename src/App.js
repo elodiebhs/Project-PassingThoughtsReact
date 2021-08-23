@@ -20,6 +20,11 @@ function App() {
     },
   ]);
 
+  //Inside of addThought(), we’ll call setThoughts() with a function that returns a new state: the array with the new thought at the front.
+  const addThought = (thought) => {
+    setThoughts(prev => [thought, ...prev])
+  }
+
   return (
     <div className="App">
       <header>
