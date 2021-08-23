@@ -1,10 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { generateId, getNewExpirationTime } from './utilities';
 
 export function AddThoughtForm(props) {
 
   const [text, setText] = useState('');
-  
+
+
+  const handleTextChange = (event) => {
+    //It will take the event as an argument, and will call setText() to update the state.
+    setText(event.target.value)
+  }
   return (
     <form className="AddThoughtForm">
       <input
