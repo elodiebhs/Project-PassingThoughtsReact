@@ -20,6 +20,8 @@ export function AddThoughtForm(props) {
       text: text,
       expiresAd: getNewExpirationTime()
     }
+
+    props.addThought(thought)
   }
   return (
     <form className="AddThoughtForm" onSubmit={handleSubmit}>
