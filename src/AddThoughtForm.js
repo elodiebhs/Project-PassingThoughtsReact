@@ -21,7 +21,11 @@ export function AddThoughtForm(props) {
       expiresAd: getNewExpirationTime()
     }
 
-    props.addThought(thought)
+    //pass object to function addThought
+    props.addThought(thought);
+
+    //Clear the input’s text after adding a new thought.
+    setText('');
   }
   return (
     <form className="AddThoughtForm" onSubmit={handleSubmit}>
