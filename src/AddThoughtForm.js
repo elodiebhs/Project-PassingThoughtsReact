@@ -16,16 +16,18 @@ export function AddThoughtForm(props) {
     event.preventDefault()
 
     const thought = {
-      id:generateId(),
+      id: generateId(),
       text: text,
       expiresAd: getNewExpirationTime()
     }
 
-    //pass object to function addThought
-    props.addThought(thought);
+    if (text.length > 0) {
+      //pass object to function addThought
+      props.addThought(thought);
 
-    //Clear the input’s text after adding a new thought.
-    setText('');
+      //Clear the input’s text after adding a new thought.
+      setText('');
+    }
   }
   return (
     <form className="AddThoughtForm" onSubmit={handleSubmit}>
@@ -33,7 +35,7 @@ export function AddThoughtForm(props) {
         type="text"
         aria-label="What's on your mind?"
         placeholder="What's on your mind?"
-        value ={text}
+        value={text}
         onChange={handleTextChange}
       />
       <input type="submit" value="Add" />
