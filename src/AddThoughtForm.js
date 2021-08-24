@@ -10,8 +10,13 @@ export function AddThoughtForm(props) {
     //It will take the event as an argument, and will call setText() to update the state.
     setText(event.target.value)
   }
+
+  const handleSubmit = (event) => {
+    //prevent the page from refreshing
+    event.preventDefault()
+  }
   return (
-    <form className="AddThoughtForm">
+    <form className="AddThoughtForm" onSubmit={handleSubmit}>
       <input
         type="text"
         aria-label="What's on your mind?"
