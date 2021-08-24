@@ -14,6 +14,12 @@ export function AddThoughtForm(props) {
   const handleSubmit = (event) => {
     //prevent the page from refreshing
     event.preventDefault()
+
+    const thought = {
+      id:generateId(),
+      text: text,
+      expiresAd: getNewExpirationTime()
+    }
   }
   return (
     <form className="AddThoughtForm" onSubmit={handleSubmit}>
