@@ -40,7 +40,7 @@ function App() {
         <AddThoughtForm addThought={addThought} />
         <ul className="thoughts">
           {thoughts.map((thought) => (
-            <Thought key={thought.id} thought={thought} />
+            <Thought key={thought.id} thought={thought} removeThought={removeThought}/>
           ))}
         </ul>
       </main>
