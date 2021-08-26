@@ -27,7 +27,7 @@ function App() {
 
   // goo through the thoughts array, fitlter the thoughtId to Remove and remove it. It will return an array only with the thoughts we want to keep
   const removeThought = (thoughtIdToRemove) => {
-    setThoughts(prev => thoughts.filter(thoughts => (thought.id !== thoughtIdToRemove)))
+    setThoughts(prev => thoughts.filter(thoughts => (thoughts.id !== thoughtIdToRemove)))
     
   }
 
